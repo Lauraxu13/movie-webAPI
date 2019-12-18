@@ -1,0 +1,36 @@
+<h3 class="section-title">My Watchlist</h3>
+<main>
+  <section
+    class="movieSection grow"
+    *ngFor="let movie of watchList; index as i"
+  >
+    <div class="image">
+      <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" />
+    </div>
+    <div class="info">
+      <h3>{{ movie.title }}</h3>
+      <h4>Average rating: {{ movie.vote_average }}</h4>
+      <div class="info-btns">
+        <button
+          class="summary-btn"
+          (click)="setIndex(i)"
+          (click)="toggleSummary()"
+        >
+          Summary
+        </button>
+        <label class="watchList">
+          <button class="watchButton" (click)="removeFromList(i)">
+            Remove Movie
+            <i class="far fa-minus-square"></i></button
+        ></label>
+      </div>
+    </div>
+    <div
+      class="movieOverview"
+      [ngClass]="{ hidden: summaryVisible }"
+      *ngIf="index === i"
+    >
+      {{ movie.overview }}
+    </div>
+  </section>
+</main>

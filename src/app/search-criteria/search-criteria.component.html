@@ -1,0 +1,60 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <section id="rating">
+    <p id="top-p">Language</p>
+    <label
+      ><input type="radio" name="language" value="en" ngModel /> English</label
+    >
+    <label
+      ><input type="radio" name="language" value="es" ngModel /> Spanish</label
+    >
+    <label
+      ><input type="radio" name="language" value="cn" ngModel />
+      Cantonese</label
+    >
+    <label
+      ><input type="radio" name="language" value="zh" ngModel /> Mandarin</label
+    >
+    <label
+      ><input type="radio" name="language" value="fr" ngModel /> French</label
+    >
+    <label
+      ><input type="radio" name="language" value="tl" ngModel /> Tagalog</label
+    >
+    <label
+      ><input type="radio" name="language" value="vi" ngModel />
+      Vietnamese</label
+    >
+    <label
+      ><input type="radio" name="language" value="ko" ngModel /> Korean</label
+    >
+    <label
+      ><input type="radio" name="language" value="de" ngModel />German</label
+    >
+    <label
+      ><input type="radio" name="language" value="ar" ngModel /> Arabic</label
+    >
+  </section>
+
+  <section id="year">
+    <p>Year</p>
+    <input type="number" name="year" ngModel pattern="(?=.*19|20)[0-9]{4}" />
+  </section>
+
+  <section id="stuff">
+    <p>Genre</p>
+    <div class="genre-options">
+      <div *ngFor="let genre of genres; index as i">
+        <label>
+          <input
+            type="checkbox"
+            name="{{ genre.name }}"
+            value="{{ genre.id }}"
+            [(ngModel)]="selectedGenres[genre.id]"
+          />{{ genre.name }}</label
+        >
+      </div>
+    </div>
+  </section>
+  <button [disabled]="form.invalid">Find Movies</button>
+</form>
+<app-movie-list [movies]="movies"></app-movie-list>

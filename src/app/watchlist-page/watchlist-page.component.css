@@ -1,0 +1,126 @@
+body {
+  padding: 20px;
+}
+
+.watchButton {
+  margin-right: 5px;
+  border: 1px solid black;
+  font-size: 14px;
+}
+
+.watchButton:hover {
+  cursor: pointer;
+}
+
+.movieSection {
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  width: 240px;
+  margin: 5px;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+a:visited {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+button {
+  border-style: none;
+  background: none;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+h1,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+.movieSection {
+  display: flex;
+  flex-direction: column;
+  /* border: 0.5px solid grey; */
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 0 auto; */
+}
+
+.watchList {
+  font-size: 8px;
+}
+
+.movie-summary {
+  font-size: 12px;
+}
+
+.summary-btn {
+  border: 1px solid black;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.summary-btn:hover {
+  cursor: pointer;
+}
+
+.info-btns {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.025);
+}
+
+.movieOverview {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.section-title {
+  margin-left: 10px;
+}
